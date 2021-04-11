@@ -12,7 +12,7 @@ const Weather = props => (
     {props.temprature && (
       <p className="weather__key">
         Temprature in degree celsius :
-        <span className="weather__value">{props.temprature - 273.0}</span>
+        <span className="weather__value">{Math.floor(props.temprature) - 273}</span>
       </p>
     )}
 

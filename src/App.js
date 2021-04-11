@@ -20,15 +20,16 @@ class App extends React.Component {
       `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=0bd33d9a24a5d6bdfcac35ced705759d`
     );
     const data = await api_call.json();
-    console.log(data);
+    // console.log(data);
     if (data.message === 'city not found')
     {
       this.setState({
-        temprautre: undefined,
+        
         Humidity: undefined,
         city: undefined,
         country: undefined,
         description: undefined,
+        temprature: undefined,
         error: "City not found"
       });
     }
@@ -43,7 +44,7 @@ class App extends React.Component {
       });
     } else {
       this.setState({
-        temprautre: undefined,
+        temprature: undefined,
         Humidity: undefined,
         city: undefined,
         country: undefined,

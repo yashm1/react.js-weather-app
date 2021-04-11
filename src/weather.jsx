@@ -11,19 +11,19 @@ const Weather = props => (
     )}
     {props.temprature && (
       <p className="weather__key">
-        Temprature in degree celsius :
-        <span className="weather__value">{Math.floor(props.temprature) - 273}</span>
+        Temprature  :  
+        <span className="weather__value">{' '+(Math.floor(props.temprature) - 273).toString()+'°C'}</span>
       </p>
     )}
 
     {props.Humidity && (
       <p className="weather__key">
-        Humidity: <span className="weather__value">{props.Humidity}</span>{" "}
+        Humidity: <span className="weather__value">{(props.Humidity).toString() + ' gm⁻³'}</span>{" "}
       </p>
     )}
     {props.description && (
       <p className="weather__key">
-        Description:<span className="weather__value">{props.description}</span>
+        Description : <span className="weather__value">{props.description}</span>
       </p>
     )}
     {props.error && <p className="weather__error">{props.error}</p>}
